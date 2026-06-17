@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chá de Cozinha | Giovanna & João</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#fffdf8;
+color:#2f436e;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2000');
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero-content{
+max-width:800px;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:5rem;
+}
+
+.hero p{
+font-size:1.2rem;
+letter-spacing:2px;
+}
+
+.section{
+padding:80px 10%;
+}
+
+.title{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+text-align:center;
+margin-bottom:40px;
+color:#1f3b73;
+}
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+min-width:120px;
+text-align:center;
+}
+
+.card span{
+font-size:2rem;
+font-weight:bold;
+}
+
+.story{
+max-width:900px;
+margin:auto;
+line-height:1.9;
+font-size:1.05rem;
+}
+
+.info{
+text-align:center;
+font-size:1.1rem;
+line-height:2;
+}
+
+.footer{
+background:#1f3b73;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+<div class="hero-content">
+<p>🍋 CHÁ DE COZINHA 🍋</p>
+<h1>Giovanna & João</h1>
+<p>13 de Setembro de 2026 • 14h</p>
+</div>
+</section>
+
+<section class="section">
+
+<h2 class="title">Contagem Regressiva</h2>
+
+<div class="countdown">
+
+<div class="card">
+<span id="days">0</span>
+<p>Dias</p>
+</div>
+
+<div class="card">
+<span id="hours">0</span>
+<p>Horas</p>
+</div>
+
+<div class="card">
+<span id="minutes">0</span>
+<p>Minutos</p>
+</div>
+
+<div class="card">
+<span id="seconds">0</span>
+<p>Segundos</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">Nossa História</h2>
+
+<div class="story">
+
+<p>
+Dizem que o futuro pertence a Deus, mas Ele gosta de escrever as mais belas histórias através dos encontros mais simples.
+</p>
+
+<br>
+
+<p>
+A nossa começou na faculdade. Em meio às aulas, trabalhos e à rotina acadêmica, Deus cruzou nossos caminhos de uma forma que jamais imaginávamos.
+</p>
+
+<br>
+
+<p>
+Nosso primeiro encontro oficial foi no McDonald's. Entre conversas, risadas e batatas fritas, o coração do João já tinha tomado uma decisão que mudaria tudo.
+</p>
+
+<br>
+
+<p>
+Hoje temos a certeza de que encontramos um no outro nosso porto seguro, nosso melhor amigo e o amor que Deus preparou para nós.
+</p>
+
+<br>
+
+<p>
+Nosso Chá de Cozinha representa muito mais do que a construção de uma casa. É a celebração de uma família que está nascendo e de uma história escrita pelas mãos de Deus.
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">Informações</h2>
+
+<div class="info">
+
+<p>📅 13 de Setembro de 2026</p>
+
+<p>🕑 14h</p>
+
+<p>📍 Rua Horácio Manoel Vieira, 443</p>
+
+<p>Jardim Paulista - Guarulhos/SP</p>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<p>Uma História Escrita por Deus 💙</p>
+
+<p>Giovanna & João</p>
+
+</footer>
+
+<script>
+
+const eventDate = new Date("September 13, 2026 14:00:00").getTime();
+
+setInterval(() => {
+
+const now = new Date().getTime();
+const distance = eventDate - now;
+
+document.getElementById("days").innerHTML =
+Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("hours").innerHTML =
+Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerHTML =
+Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerHTML =
+Math.floor((distance%(1000*60))/1000);
+
+},1000);
+
+</script>
+
+</body>
+</html>
