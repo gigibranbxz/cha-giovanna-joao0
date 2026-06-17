@@ -22,7 +22,7 @@ const countdownInterval = setInterval(function() {
 }, 1000);
 
 // NÚMERO DO WHATSAPP DE CONFIRMAÇÃO (Coloque o seu número DDD + Número sem espaços)
-const WHATSAPP_NUMBER = "5511999999999"; 
+const WHATSAPP_NUMBER = "5511943039771"; 
 
 // FUNÇÃO PARA CONFIRMAÇÃO DE PRESENÇA VIA WHATSAPP
 function sendRSVP() {
