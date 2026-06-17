@@ -1,4 +1,5 @@
-// CONFIGURAÇÃO DO CONTADOR REGRESSIVO (Data: 13 de Setembro de 2026)
+// CONFIGURAÇÃO UNIVERSAL DO CONTADOR REGRESSIVO (Data: 13 de Setembro de 2026 às 14:00)
+// Formato: Ano, Mês-1 (Setembro é 8), Dia, Hora, Minuto
 const targetDate = new Date(2026, 8, 13, 14, 0, 0).getTime();
 
 const countdownInterval = setInterval(function() {
@@ -8,20 +9,18 @@ const countdownInterval = setInterval(function() {
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    const segundos = Math.floor((difference % (1000 * 60)) / 1000);
 
-    document.getElementById("days").innerText = days < 10 ? "0" + days : days;
-    document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
-    document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
-    document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+    document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+    document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+    document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("seconds").innerHTML = segundos < 10 ? "0" + segundos : segundos;
 
     if (difference < 0) {
         clearInterval(countdownInterval);
-        document.getElementById("countdown").innerHTML = "<h3>O Chá está acontecendo! 🎉</h3>";
+        document.getElementById("countdown").innerHTML = "<h3 style='color:#0f4c81; font-family: Cinzel, serif;'>O Chá está acontecendo! 🎉</h3>";
     }
 }, 1000);
-
-// NÚMERO DO WHATSAPP DE CONFIRMAÇÃO (Coloque o seu número DDD + Número sem espaços)
 const WHATSAPP_NUMBER = "5511943039771"; 
 
 // FUNÇÃO PARA CONFIRMAÇÃO DE PRESENÇA VIA WHATSAPP
