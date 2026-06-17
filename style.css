@@ -1,99 +1,111 @@
-/* Configurações Gerais inspiradas no Estilo Amalfi */
+/* RESET E CONFIGURAÇÕES GERAIS */
 body {
     margin: 0;
-    padding: 20px 10px;
+    padding: 40px 15px;
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f7f6;
-    /* Fundo simulando azulejo português/italiano sutil */
+    background-color: #f7fafc;
+    /* Fundo temático elegante: padrão sutil de azulejos maiólica */
     background-image: url('https://www.transparenttextures.com/patterns/az-subtle.png');
-    color: #1a365d;
+    color: #0f4c81;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-/* Moldura do Convite */
+/* MOLDURA DO CONVITE AMALFI */
 .invite-container {
-    max-width: 600px;
+    max-width: 650px;
     width: 100%;
     background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 50px 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(15, 76, 129, 0.15);
     text-align: center;
     box-sizing: border-box;
     position: relative;
-    /* Borda Dupla Azul Cobalto igual ao convite */
-    border: 4px double #0f4c81;
-    outline: 15px solid #ffffff;
+    /* Borda sofisticada com linhas azuis e cantos detalhados */
+    border: 3px solid #0f4c81;
+    outline: 12px solid #ffffff;
 }
 
-/* Elementos de Estilo e Fontes */
-.top-lemon {
-    font-size: 40px;
-    margin-bottom: 10px;
+/* Detalhes decorativos de Limão nas bordas */
+.invite-container::before {
+    content: "🍋";
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 35px;
+    background: white;
+    padding: 0 15px;
 }
 
+/* FONTES E TEXTOS DESTAQUE */
 .subtitle {
     font-family: 'Cinzel', serif;
-    font-size: 13px;
-    letter-spacing: 2px;
+    font-size: 12px;
+    letter-spacing: 3px;
     color: #0f4c81;
-    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
 }
 
 .main-title {
     font-family: 'Cinzel', serif;
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 700;
     color: #0f4c81;
     margin: 10px 0;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .separator {
-    color: #0f4c81;
-    letter-spacing: 5px;
-    margin: 5px 0;
+    color: #eab308; /* Amarelo Limão elegante */
+    font-size: 18px;
+    margin: 10px 0;
 }
 
 .couple-names {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 48px;
+    font-size: 56px;
     color: #1e40af;
-    margin: 15px 0;
+    margin: 20px 0;
     font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
 }
 
 .heart-line {
     color: #0f4c81;
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 25px;
 }
 
 .tagline {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
     color: #4b5563;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
-/* Contador Regressivo */
+/* CONTADOR REGRESSIVO ESTILIZADO */
 .countdown-container {
     background: #f0f7ff;
-    border: 1px dashed #0f4c81;
-    padding: 15px;
-    border-radius: 15px;
-    margin: 30px 0;
+    border: 2px solid #0f4c81;
+    padding: 20px 15px;
+    border-radius: 20px;
+    margin: 35px 0;
+    position: relative;
+    background-image: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%);
 }
 .countdown-container h3 {
     margin-top: 0;
     font-family: 'Cinzel', serif;
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 1px;
     color: #0f4c81;
 }
 #countdown {
@@ -101,153 +113,197 @@ body {
     justify-content: space-around;
 }
 .time-block span {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: 700;
     color: #1e40af;
+    font-family: 'Playfair Display', serif;
 }
 .time-block p {
-    margin: 0;
-    font-size: 12px;
+    margin: 2px 0 0 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     color: #6b7280;
 }
 
-/* Detalhes de Data e Hora */
+/* DETALHES DE DATA E HORA */
 .event-details {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    margin: 25px 0;
+    gap: 40px;
+    margin: 35px 0;
+    background: #fffbeb; /* Amarelo bem suave */
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px dashed #eab308;
 }
 .detail-item p {
-    margin: 5px 0;
+    margin: 4px 0;
     font-size: 14px;
 }
 .detail-divider {
     width: 1px;
-    height: 50px;
-    background-color: #0f4c81;
+    height: 45px;
+    background-color: #eab308;
 }
 .icon {
-    font-size: 24px;
+    font-size: 22px;
 }
 
-/* Botões e Seções */
+/* BOTÕES E MAPAS */
 .btn-maps, .btn-whatsapp {
     display: inline-block;
     background-color: #0f4c81;
     color: white;
-    padding: 12px 25px;
+    padding: 12px 30px;
     text-decoration: none;
-    border-radius: 25px;
-    font-size: 14px;
+    border-radius: 30px;
+    font-size: 13px;
     font-weight: 500;
-    transition: 0.3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(15, 76, 129, 0.2);
 }
 .btn-maps:hover, .btn-whatsapp:hover {
     background-color: #1e40af;
     transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(15, 76, 129, 0.3);
 }
 
+/* DIVISORES DE SEÇÃO MAIÓLICA */
 .section-divider {
     border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(15, 76, 129, 0), rgba(15, 76, 129, 0.75), rgba(15, 76, 129, 0));
-    margin: 40px 0;
+    height: 12px;
+    background-image: url('https://www.transparenttextures.com/patterns/binding-dark.png');
+    background-color: #0f4c81;
+    opacity: 0.15;
+    margin: 45px 0;
 }
 
 h3 {
     font-family: 'Cinzel', serif;
     color: #0f4c81;
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
 .story-text {
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.8;
     color: #4b5563;
     text-align: justify;
+    padding: 0 10px;
 }
 
-/* Galeria de Fotos */
+/* GALERIA DE FOTOS DO CASAL */
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-top: 15px;
+    gap: 15px;
+    margin-top: 20px;
+}
+.photo-card {
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid #0f4c81;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+.photo-card:hover {
+    transform: scale(1.04);
 }
 .photo-card img {
     width: 100%;
-    height: 120px;
+    height: 140px;
     object-fit: cover;
-    border-radius: 10px;
-    border: 2px solid #0f4c81;
+    display: block;
 }
 
-/* Inputs de Confirmação */
+/* CONFIRMAÇÃO DE PRESENÇA (RSVP) */
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 #rsvp-name {
-    width: 80%;
-    padding: 12px;
+    width: 85%;
+    padding: 14px;
     border: 1px solid #cbd5e1;
-    border-radius: 25px;
+    border-radius: 30px;
     text-align: center;
     font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+}
+#rsvp-name:focus {
+    border-color: #0f4c81;
+    box-shadow: 0 0 5px rgba(15, 76, 129, 0.2);
 }
 
-/* Lista de Presentes Estilizada */
+/* LISTA DE PRESENTES ORGANIZADA */
 .gift-list {
-    max-height: 300px;
+    max-height: 320px;
     overflow-y: auto;
-    border: 1px solid #e2e8f0;
-    border-radius: 15px;
+    border: 2px solid #f1f5f9;
+    border-radius: 20px;
     padding: 10px;
-    text-align: left;
+    background: #ffffff;
 }
 .gift-item {
-    padding: 12px 15px;
+    padding: 14px 18px;
     border-bottom: 1px solid #f1f5f9;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     cursor: pointer;
-    transition: 0.2s;
+    transition: background 0.2s;
     font-size: 14px;
+    color: #334155;
+}
+.gift-item:last-child {
+    border-bottom: none;
 }
 .gift-item:hover {
     background-color: #f0f7ff;
+    color: #0f4c81;
 }
 .status.available {
     color: #16a34a;
-    font-weight: bold;
-    font-size: 12px;
+    background: #f0fdf4;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
 }
 
 .footer-note {
     font-family: 'Cinzel', serif;
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 13px;
+    letter-spacing: 2px;
     color: #0f4c81;
-    margin-top: 40px;
+    margin-top: 50px;
+    font-weight: 600;
 }
 
-/* Ajustes Responsivos para Celular */
-@media (max-width: 480px) {
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 540px) {
     .invite-container {
-        padding: 25px 15px;
-        outline: 5px solid #ffffff;
+        padding: 35px 20px;
+        outline: 6px solid #ffffff;
     }
-    .couple-names { font-size: 36px; }
-    .main-title { font-size: 26px; }
-    .photo-grid { grid-template-columns: 1fr; }
-    .photo-card img { height: 200px; }
+    .couple-names { font-size: 42px; }
+    .main-title { font-size: 28px; }
+    .photo-grid { grid-template-columns: 1fr; gap: 20px; }
+    .photo-card img { height: 220px; }
+    .event-details { flex-direction: column; gap: 15px; }
+    .detail-divider { width: 60%; height: 1px; }
+    #rsvp-name { width: 100%; }
 }
