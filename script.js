@@ -1,5 +1,5 @@
 // CONFIGURAÇÃO DO CONTADOR REGRESSIVO (Data: 13 de Setembro de 2026)
-const targetDate = new Date("September 13, 2026 14:00:00").getTime();
+const targetDate = new Date(2026, 8, 13, 14, 0, 0).getTime();
 
 const countdownInterval = setInterval(function() {
     const now = new Date().getTime();
